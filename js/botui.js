@@ -19,26 +19,26 @@ for(var s=a.css,u=a.type,l=a.enterClass,f=a.enterToClass,p=a.enterActiveClass,d=
 !function(e,t){"use strict";"function"==typeof define&&define.amd?define([],function(){return e.BotUI=t(e)}):e.BotUI=t(e)}("undefined"!=typeof window?window:this,function(e,t){"use strict";return function(t,n){function o(e,t,n,o){return"<a class='botui-message-content-link' target='"+(o?"blank":"")+"' href='"+n+"'>"+t+"</a>"}function i(e){return e.replace(v.image,"<img class='botui-message-content-image' src='$2' alt='$1' />").replace(v.icon,"<i class='botui-icon botui-message-content-icon fa fa-$1'></i>").replace(v.link,o)}function r(e,t){var n=document.createElement("script");n.type="text/javascript",n.src=e,t&&(n.onload=t),document.body.appendChild(n)}function s(e){y.action.addMessage&&h.message.human({delay:100,content:e}),y.action.show=!y.action.autoHide}function a(e){if(!e.loading&&!e.content)throw Error('BotUI: "content" is required in a non-loading message object.');e.type=e.type||"text",e.visible=!e.delay&&!e.loading;var t=y.messages.push(e)-1;return new Promise(function(n,o){setTimeout(function(){e.delay&&(e.visible=!0,e.loading&&(e.loading=!1)),n(t)},e.delay||0)})}function u(e){return"string"==typeof e&&(e={content:e}),e||{}}function c(e,t){for(var n in e)t.hasOwnProperty(n)||(t[n]=e[n])}function d(e){if(!e.action)throw Error('BotUI: "action" property is required.')}function l(e){return d(e),c({type:"text",cssClass:"",autoHide:!0,addMessage:!0},e),y.action.type=e.type,y.action.cssClass=e.cssClass,y.action.autoHide=e.autoHide,y.action.addMessage=e.addMessage,new Promise(function(t,n){p=t,setTimeout(function(){y.action.show=!0},e.delay||0)})}if(n=n||{},!t)throw Error("BotUI: Container id is required as first argument.");if(!document.getElementById(t))throw Error("BotUI: Element with id #"+t+" does not exist.");if(!e.Vue&&!n.vue)throw Error("BotUI: Vue is required but not found.");var f,m,p,g={debug:!1,fontawesome:!0},h={},v={icon:/!\(([^\)]+)\)/gim,image:/!\[(.*?)\]\((.*?)\)/gim,link:/\[([^\[]+)\]\(([^\)]+)\)(\^?)/gim};e.Vue=e.Vue||n.vue;for(var b in g)n.hasOwnProperty(b)&&(g[b]=n[b]);e.Promise||Promise||options.promise||r("https://cdn.jsdelivr.net/es6-promise/4.1.0/es6-promise.min.js");var w={template:"<div class=\"botui botui-container\" v-botui-container><div class=\"botui-messages-container\"><div v-for=\"msg in messages\" class=\"botui-message\" :class=\"msg.cssClass\" v-botui-scroll><transition name=\"slide-fade\"><div v-if=\"msg.visible\" :class=\"[{human: msg.human, \'botui-message-content\': true}, msg.type]\"><span v-if=\"msg.type == \'text\'\" v-text=\"msg.content\" v-botui-markdown></span> <iframe v-if=\"msg.type == \'embed\'\" :src=\"msg.content\" frameborder=\"0\" allowfullscreen></iframe></div></transition><div v-if=\"msg.loading\" class=\"botui-message-content loading\"><i class=\"dot\"></i><i class=\"dot\"></i><i class=\"dot\"></i></div></div></div><div class=\"botui-actions-container\"><transition name=\"slide-fade\"><div v-if=\"action.show\" v-botui-scroll><form v-if=\"action.type == \'text\'\" class=\"botui-actions-text\" @submit.prevent=\"handle_action_text()\" :class=\"action.cssClass\"><i v-if=\"action.text.icon\" class=\"botui-icon botui-action-text-icon fa\" :class=\"\'fa-\' + action.text.icon\"></i> <input type=\"text\" ref=\"input\" :type=\"action.text.sub_type\" v-model=\"action.text.value\" class=\"botui-actions-text-input\" :placeholder=\"action.text.placeholder\" :size=\"action.text.size\" :value=\"action.text.value\" :class=\"action.text.cssClass\" required v-focus/> <button type=\"submit\" :class=\"{\'botui-actions-buttons-button\': !!action.text.button, \'botui-actions-text-submit\': !action.text.button}\"><i v-if=\"action.text.button && action.text.button.icon\" class=\"botui-icon botui-action-button-icon fa\" :class=\"\'fa-\' + action.text.button.icon\"></i> <span>{{(action.text.button && action.text.button.label) || \'Go\'}}</span></button></form><div v-if=\"action.type == \'button\'\" class=\"botui-actions-buttons\" :class=\"action.cssClass\"> <button type=\"button\" :class=\"button.cssClass\" class=\"botui-actions-buttons-button\" v-for=\"button in action.button.buttons\" @click=\"handle_action_button(button)\" autofocus><i v-if=\"button.icon\" class=\"botui-icon botui-action-button-icon fa\" :class=\"\'fa-\' + button.icon\"></i> {{button.text}}</button></div></div></transition></div></div>",data:function(){return{action:{text:{size:30,placeholder:"Write here .."},button:{},show:!1,type:"text",autoHide:!0,addMessage:!0},messages:[]}},computed:{isMobile:function(){return e.innerWidth&&e.innerWidth<=768}},methods:{handle_action_button:function(e){s(e.text);var t={type:"button",text:e.text,value:e.value};for(var n in e)e.hasOwnProperty(n)&&"type"!==n&&"text"!==n&&"value"!==n&&(t[n]=e[n]);p(t)},handle_action_text:function(){this.action.text.value&&(s(this.action.text.value),p({type:"text",value:this.action.text.value}),this.action.text.value="")}}};e.Vue.directive("botui-markdown",function(e,t){"false"!=t.value&&(e.innerHTML=i(e.textContent))}),e.Vue.directive("botui-scroll",{inserted:function(e){m.scrollTop=m.scrollHeight}}),e.Vue.directive("focus",{inserted:function(e){e.focus()}}),e.Vue.directive("botui-container",{inserted:function(e){m=e}}),f=new e.Vue({components:{"bot-ui":w}}).$mount("#"+t);var y=f.$children[0];return h.message={add:function(e){return a(u(e))},bot:function(e){return e=u(e),a(e)},human:function(e){return e=u(e),e.human=!0,a(e)},get:function(e){return Promise.resolve(y.messages[e])},remove:function(e){return y.messages.splice(e,1),Promise.resolve()},update:function(e,t){var n=y.messages[e];return n.content=t.content,n.visible=!t.loading,n.loading=!!t.loading,Promise.resolve(t.content)},removeAll:function(){return y.messages.splice(0,y.messages.length),Promise.resolve()}},h.action={show:l,hide:function(){return y.action.show=!1,Promise.resolve()},text:function(e){return d(e),y.action.text=e.action,l(e)},button:function(e){return d(e),e.type="button",y.action.button.buttons=e.action,l(e)}},g.fontawesome&&r("https://use.fontawesome.com/ea731dcb6f.js"),g.debug&&(h._botApp=f),h}});
 
 function bot_ui_ini() {
-    var botui = new BotUI("hello-mashiro")
+    var botui = new BotUI("hello-Rain")
     botui.message.add({
         delay: 800,
-        content: "Hi, there👋"
+        content: "Hi,欢迎你"
     }).then(function () {
         botui.message.add({
             delay: 1100,
-            content: "这里是 Mashiro"
+            content: "这里是雨宿り"
         }).then(function () {
             botui.message.add({
                 delay: 1100,
-                content: "一个可爱的蓝孩子~"
+                content: "身高是自我满意的175cm"
             }).then(function () {
                 botui.action.button({
                     delay: 1600,
                     action: [{
-                        text: "然后呢？ 😃",
+                        text: "还有呢？",
                         value: "sure"
                     }, {
-                        text: "少废话！ 🙄",
+                        text: "不用再说了",
                         value: "skip"
                     }]
                 }).then(function (a) {
@@ -51,7 +51,7 @@ function bot_ui_ini() {
     var sure = function () {
             botui.message.add({
                 delay: 600,
-                content: "😘"
+                content: "√"
             }).then(function () {
                 secondpart()
             })
@@ -65,33 +65,37 @@ function bot_ui_ini() {
         secondpart = function () {
             botui.message.add({
                 delay: 1500,
-                content: "目前就读于上海财经大学"
+                content: "现在还是一名半计算机专业的大学生"
             }).then(function () {
                 botui.message.add({
                     delay: 1500,
-                    content: "向往技术却误入商科，但后来喜欢上了经济学…"
+                    content: "热爱动漫、音乐、阅读，励志被富美少女包养（一切努力的目标）"
+                }).then(function () {
+                botui.message.add({
+                    delay: 1500,
+                    content: "曾经梦想成为漫画家，却阴差阳错掉入计算机的深渊"
                 }).then(function () {
                     botui.message.add({
                         delay: 1200,
-                        content: "因为数据分析也需要Coder嘛"
+                        content: "因此现在的梦想有：画师、小说家、网站设计师（全都要！）"
                     }).then(function () {
                         botui.message.add({
                             delay: 1500,
-                            content: "主攻 R 语言和 Python，略懂 STATA，偶尔也折腾 HTML/CSS/JavaScript/PHP"
+                            content: "目前而言，这些梦想已经完成一半，剩下的难题打算再慢慢攻破"
                         }).then(function () {
                             botui.message.add({
                                 delay: 1500,
-                                content: "研究的方向，是经济/金融方向的数据分析（data science）以及机器学习（machine learning）"
+                                content: "没关系我并不着急，正所谓一急就输了嘛"
                             }).then(function () {
                                 botui.message.add({
                                     delay: 1800,
-                                    content: "喜欢画画，希望有一天能够被称为画师"
+                                    content: "还有最重要的一点，我永远喜欢雪之下雪乃！"
                                 }).then(function () {
                                     botui.action.button({
                                         delay: 1100,
                                         action: [{
-                                            text: "为什么叫Mashiro呢？ 🤔",
-                                            value: "why-mashiro"
+                                            text: "为什么叫幽奈さん呢？ 🤔",
+                                            value: "why-幽奈さん"
                                         }]
                                     }).then(function (a) {
                                         thirdpart()
@@ -102,17 +106,18 @@ function bot_ui_ini() {
                     })
                 })
             })
-        },
+        })
+    },
         thirdpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "Mashiro以及站名都来自一部动画，因为和主角有一样的爱好~ 如果有兴趣可以找找首页上的视频~"
+                content: "在构思类似的名字的时候，看见一条推荐语句就决定了"
             }).then(function () {
                 botui.action.button({
                     delay: 1500,
                     action: [{
-                        text: "为什么是白猫呢？ 🤔",
-                        value: "why-cat"
+                        text: "为什么是Rain呢？",
+                        value: "why-Rain"
                     }]
                 }).then(function (a) {
                     fourthpart()
@@ -122,11 +127,11 @@ function bot_ui_ini() {
         fourthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "因为对GitHub有种执念… "
+                content: "因为我喜欢雨 "
             }).then(function () {
                 botui.message.add({
                     delay: 1100,
-                    content: "而且我真的是猫控！"
+                    content: "雨给人的感觉真的无法形容"
                 }).then(function () {
                     botui.action.button({
                         delay: 1500,
@@ -143,11 +148,11 @@ function bot_ui_ini() {
         fifthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "emmmm，看备案信息你就知道了=.= 本来想要zheng.xin的，但50万真买不起。。"
+                content: "出自我曾经一本小说的男主名（才不是不想再买个域名）。"
             }).then(function () {
                 botui.message.add({
                     delay: 1600,
-                    content: "那么，仔细看看我的博客吧？ ^_^"
+                    content: "那么最后再说一次，我永远喜欢雪之下雪乃！"
                 })
             })
         } 
