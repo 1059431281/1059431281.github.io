@@ -61,7 +61,7 @@
   </style>
 </head>
 </html>
-<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+<body class="app page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
   <div class="scrollbar" id="bar">
   </div>
   <a href="#" class="cd-top faa-float animated"></a>
@@ -236,7 +236,7 @@
               </li>
             
               <li>
-                <a href="/">
+                <a href="/comment">
                   <span class="faa-parent animated-hover">
                     <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
                     留言板
@@ -474,8 +474,7 @@
 </footer>
 
 
-
-<!-- <script src="/js/tocbot.js"></script> -->
+ <!--<script src="/js/tocbot.js"></script>-->
 <script type="text/javascript" src="/js/lib.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/InsightSearch.js"></script>
@@ -612,7 +611,7 @@ $(document).ready(function() {
       </li>
     
       <li>
-        <a href="/">
+        <a href="/comment">
           <span class="faa-parent animated-hover">
             <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
             留言板
@@ -750,5 +749,46 @@ $(document).ready(function() {
     })
   });
 </script>
+
+  <div id="xuehua" style="position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;display: none"></div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/live2d/waifu.css">
+  <div class="waifu" style="z-index:1000">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="waifu-tool">
+      <span class="fui-home"></span>
+      <span class="fui-chat"></span>
+      <span class="fui-eye"></span>
+      <span class="fui-user"></span>
+      <span class="fui-photo"></span>
+      <span class="fui-info-circle"></span>
+      <span class="fui-cross"></span>
+    </div>
+  </div>
+  <!--<script src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/live2d/jquery-3.4.1.min.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/live2d/waifu-tips.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/live2d/live2d.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/js/jq.snow.js"></script>
+  <script type="text/javascript">
+      initModel("https://cdn.jsdelivr.net/gh/1059431281/CDN@master/live2d/")
+      $(function(){
+          $.fn.snow({
+              minSize: 5,		//雪花的最小尺寸
+              maxSize: 40, 	//雪花的最大尺寸
+              newOn: 700		//雪花出现的频率 这个数值越小雪花越多
+          });
+      });
+      window.addEventListener("resize",function () {
+          clearInterval(interval);
+
+          $(function(){
+              $.fn.snow({
+                  minSize: 5,		//雪花的最小尺寸
+                  maxSize: 40, 	//雪花的最大尺寸
+                  newOn: 700		//雪花出现的频率 这个数值越小雪花越多
+              });
+          });
+      },false)
+  </script>
 </body>
 </html>
