@@ -975,17 +975,29 @@ function inlojv_js_getqqinfo () {
 function get_poem (poem_ele, info_ele) {
   var poem = document.querySelector(poem_ele)
   var info = document.querySelector(info_ele)
-  var xhr = new XMLHttpRequest()
-  xhr.open('get', 'https://v2.jinrishici.com/one.json')
-  xhr.withCredentials = true
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      var data = JSON.parse(xhr.responseText)
-      poem.innerHTML = data.data.content
-      info.innerHTML = '【' + data.data.origin.dynasty + '】' + data.data.origin.author + '《' + data.data.origin.title + '》'
-    }
-  }
-  xhr.send()
+    var data =[
+        '唯有比你遇见的人都要卑鄙，你才能得以站在人群的顶峰。但是，如果仅仅是想在这个世界生存下去的话，那么只要扮演普通的小透明便可。',
+        '即使努力也不一定能实现梦想。不如说实现不了的还比较多。但是曾经努力过的事实却足以安慰自己。整个社会对我都很苛刻。所以至少让我自己宽容一下我自己吧。如果大家都对自己更宽容一点的话。大家都变成废柴就没有废柴了。',
+        '人总是喜欢做一些自以为很帅的动作，但那其实很蠢。反过来说，自己认为很蠢的事，其实是很帅的！',
+        '即便知道这种想（做）法是错的，自己仍然要使用它。于是说，根本不用在乎是否正确，只要自己愿意接受就行了。',
+        '其实呢，人都会在下意识否定别人对自己的批评，又或是当自己的想法被对方猜中，哪怕撒谎也不愿意承认自己被猜中。',
+        '人是非常狡猾的。他们会将自己言时欠缺的思考在被人指出后自动补全，借此否定别人的说法。',
+        '隐形成本，这往往是最容易被人们忽略的，与之相对的还有机会成本。',
+        '道理这种东西说出来谁都懂，但是，问题的关键在于没人说出这个道理时，你根本不知道正在发生的事情可以利用这个道理。'
+    ]
+  // var xhr = new XMLHttpRequest()
+  // xhr.open('get', 'https://v2.jinrishici.com/one.json')
+  // xhr.withCredentials = true
+  // xhr.onreadystatechange = function () {
+  //   if (xhr.readyState === 4) {
+  //     var data = JSON.parse(xhr.responseText)
+  //   for(let)
+    var i = Math.floor(Math.random()*data.length);
+      poem.innerHTML = data[i];
+      // info.innerHTML = '【' + data.data.origin.dynasty + '】' + data.data.origin.author + '《' + data.data.origin.title + '》'
+    // }
+  // }
+  // xhr.send()
 }
 
 // function loadBotui() {
@@ -1099,13 +1111,16 @@ var home = location.href,
     },
     VA: function () {
       if (!valine) {
+        console.log(mashiro_option.v_appId)
+          console.log(mashiro_option.v_appKey)
+          console.log(window.location.pathname)
         var valine = new Valine()
         valine.init({
           el: '#vcomments',
           appId: mashiro_option.v_appId,
           appKey: mashiro_option.v_appKey,
           path: window.location.pathname,
-          placeholder: '你是我一生只会遇见一次的惊喜 ...'
+          placeholder: '雨天的泥地必然会留下你的足迹 ...'
         })
       }
     },

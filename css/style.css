@@ -7722,15 +7722,20 @@ img[src*="#in-center"] {
     letter-spacing:4px;
     color:#797979
 }
+.comment_poem{
+    font-size: 20px;
+    font-family: 楷体;
+}
 .poem-wrap p {
     width:70%;
     margin:auto;
     line-height:30px;
     color:#797979
 }
-.poem-wrap p#poem {
-    font-size:25px
-}
+/*.poem-wrap p#poem {*/
+    /*font-size:20px;*/
+    /*!*margin-bottom: 4px;*!*/
+/*}*/
 .poem-wrap p#info {
     font-size:15px;
     margin:15px auto
