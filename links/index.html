@@ -361,13 +361,13 @@
 <div id="vcomments"></div>
 <script>
     window.onload=function (ev) {
-        
+        // console.log(window.location.pathname.replace(/[/]$/,""));
         var valine = new Valine();
         valine.init({
             el: '#vcomments',
             appId: "83yGy2mMUF0pPIxI2WKxG2MJ-gzGzoHsz",
             appKey: "4xzb3WgAiyNUMBQ3kdSDL5eV",
-            path: '/comment',
+            path: window.location.pathname.replace(/[/]$/,""),
             placeholder: "雨天的泥地必然会留下你的足迹 ..."
         })
     }
