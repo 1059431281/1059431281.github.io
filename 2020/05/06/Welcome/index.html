@@ -167,8 +167,13 @@
       <span class="site-title">
         <span class="logolink moe-mashiro">
           <a href="/">
-            <span class="sakurasono">さくら荘その</span>
-            <span class="shironeko">幽奈さん</span>
+            <ruby>
+                <span class="sakurasono">さくら荘その</span>
+                <span class="shironeko">幽奈さん</span>
+              <rp></rp>
+                <rt class="logo">雪柊庄的幽奈</rt>
+              <rp></rp>
+            </ruby>
           </a>
         </span>
       </span>
@@ -406,22 +411,39 @@
       <section class="post-squares nextprev">
         
           
-            <div class="post-nepre full previous">
+            <div class="post-nepre half previous">
           
-            <a href="/2020/05/10/grow-note/" rel="prev">
+            <a href="/2020/05/06/photo/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/category/study_1.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/category/study_1.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/article/photo.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/article/photo.webp">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                前端高级学习笔记</h3>
+                精美图库</h3>
                 <hr>
               </div>
             </a>
           </div>
         
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/05/06/reading/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/article/reading.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/article/reading.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                书籍库</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
         
       </section>
       
@@ -841,32 +863,26 @@ $(document).ready(function() {
   <script src="https://cdn.jsdelivr.net/gh/1059431281/CDN@1.2/live2d/live2d.js"></script>
   <script type="text/javascript">
       initModel("https://cdn.jsdelivr.net/gh/1059431281/CDN@1.2/live2d/")
-
-      // window.onload = function(){
-      //                  //屏蔽键盘事件
-      //                  document.onkeydown = function (){
-      //                          var e = window.event || arguments[0];
-      //                          //F12
-      //                          if(e.keyCode == 123){
-      //                                  return false;
-      //                              //Ctrl+Shift+I
-      //                              }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
-      //                                  return false;
-      //                              //Shift+F10
-      //                              }else if((e.shiftKey) && (e.keyCode == 121)){
-      //                                  return false;
-      //                              //Ctrl+U
-      //                              }else if((e.ctrlKey) && (e.keyCode == 85)){
-      //                                  return false;
-      //                              }
-      //                      };
-      //                  //屏蔽鼠标右键
-      //                  document.oncontextmenu = function (){
-      //                          return false;
-      //                      }
-      //
-      //
-      //              }
+      document.onkeydown = function (){
+                           var e = window.event || arguments[0];
+                           //F12
+                           if(e.keyCode == 123){
+                                   return false;
+                               //Ctrl+Shift+I
+                               }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+                                   return false;
+                               //Shift+F10
+                               }else if((e.shiftKey) && (e.keyCode == 121)){
+                                   return false;
+                               //Ctrl+U
+                               }else if((e.ctrlKey) && (e.keyCode == 85)){
+                                   return false;
+                               }
+                       };
+                   //屏蔽鼠标右键
+                   document.oncontextmenu = function (){
+                           return false;
+                       }
   </script>
   <script src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/js/sakura.js"></script>
 </body>

@@ -1033,6 +1033,7 @@ a:hover,a:active {
 .site-top {
     width:100%;
     display:block;
+    position: relative;
     margin:0 auto;
     padding:0 20px
 }
@@ -5805,12 +5806,23 @@ button.botui-actions-buttons-button {
     text-size-adjust:100%;
     width:auto
 }
+.logolink ruby{
+    ruby-position: after;
+    -webkit-ruby-position: after;
+    -moz-ruby-position: after;
+}
+.logolink ruby rt {
+    transition: opacity 0.5s;
+    opacity: 0;
+
+}
 .logolink a:hover .sakurasono {
-    background-color:orange;
+    background-color: lightskyblue;
     color:#fff
 }
 .logolink a:hover .shironeko,.logolink a:hover rt {
-    color:orange
+    color:lightskyblue;;
+    opacity: 1;
 }
 .logolink.moe-mashiro a {
     color:#464646;
@@ -7841,4 +7853,21 @@ td.hljs-ln-numbers {
 
 @media(max-width:1200px) {
     .toc {display: none;}
+}
+
+/*中文名称*/
+.ChineseName{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 16px;
+    padding: 0 10px;
+}
+.ChineseName span{
+    line-height: 12px;
+    text-align: center
+    /*height: auto;*/
+    /*font-size: 14px;*/
 }

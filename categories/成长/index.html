@@ -167,8 +167,13 @@
       <span class="site-title">
         <span class="logolink moe-mashiro">
           <a href="/">
-            <span class="sakurasono">さくら荘その</span>
-            <span class="shironeko">幽奈さん</span>
+            <ruby>
+                <span class="sakurasono">さくら荘その</span>
+                <span class="shironeko">幽奈さん</span>
+              <rp></rp>
+                <rt class="logo">雪柊庄的幽奈</rt>
+              <rp></rp>
+            </ruby>
           </a>
         </span>
       </span>
@@ -951,32 +956,26 @@ $(document).ready(function() {
   <script src="https://cdn.jsdelivr.net/gh/1059431281/CDN@1.2/live2d/live2d.js"></script>
   <script type="text/javascript">
       initModel("https://cdn.jsdelivr.net/gh/1059431281/CDN@1.2/live2d/")
-
-      // window.onload = function(){
-      //                  //屏蔽键盘事件
-      //                  document.onkeydown = function (){
-      //                          var e = window.event || arguments[0];
-      //                          //F12
-      //                          if(e.keyCode == 123){
-      //                                  return false;
-      //                              //Ctrl+Shift+I
-      //                              }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
-      //                                  return false;
-      //                              //Shift+F10
-      //                              }else if((e.shiftKey) && (e.keyCode == 121)){
-      //                                  return false;
-      //                              //Ctrl+U
-      //                              }else if((e.ctrlKey) && (e.keyCode == 85)){
-      //                                  return false;
-      //                              }
-      //                      };
-      //                  //屏蔽鼠标右键
-      //                  document.oncontextmenu = function (){
-      //                          return false;
-      //                      }
-      //
-      //
-      //              }
+      document.onkeydown = function (){
+                           var e = window.event || arguments[0];
+                           //F12
+                           if(e.keyCode == 123){
+                                   return false;
+                               //Ctrl+Shift+I
+                               }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+                                   return false;
+                               //Shift+F10
+                               }else if((e.shiftKey) && (e.keyCode == 121)){
+                                   return false;
+                               //Ctrl+U
+                               }else if((e.ctrlKey) && (e.keyCode == 85)){
+                                   return false;
+                               }
+                       };
+                   //屏蔽鼠标右键
+                   document.oncontextmenu = function (){
+                           return false;
+                       }
   </script>
   <script src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/js/sakura.js"></script>
 </body>

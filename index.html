@@ -167,8 +167,13 @@
       <span class="site-title">
         <span class="logolink moe-mashiro">
           <a href="/">
-            <span class="sakurasono">さくら荘その</span>
-            <span class="shironeko">幽奈さん</span>
+            <ruby>
+                <span class="sakurasono">さくら荘その</span>
+                <span class="shironeko">幽奈さん</span>
+              <rp></rp>
+                <rt class="logo">雪柊庄的幽奈</rt>
+              <rp></rp>
+            </ruby>
           </a>
         </span>
       </span>
@@ -492,6 +497,45 @@
 <article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
 
   <div class="post-thumb">
+    <a href="/2020/05/06/photo/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/article/photo.webp">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2020-5-6 22:05</div>
+      <a href="/2020/05/06/photo/" class="post-title">
+        <h3>精美图库</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+            <a href="/tags/图库/">图库<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p></p>
+        <div class="post-bottom">
+          <a href="/2020/05/06/photo/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+    
+<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
     <a href="/2020/05/06/Welcome/">
       <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/article/article_1.jpg">
     </a>
@@ -519,6 +563,45 @@
         <p></p>
         <div class="post-bottom">
           <a href="/2020/05/06/Welcome/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+    
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2020/05/06/reading/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/article/reading.jpg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2020-5-6 22:05</div>
+      <a href="/2020/05/06/reading/" class="post-title">
+        <h3>书籍库</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+            <a href="/tags/阅读/">阅读<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p></p>
+        <div class="post-bottom">
+          <a href="/2020/05/06/reading/" class="button-normal">
             <i class="iconfont icon-caidan"></i>
           </a>
         </div>
@@ -917,32 +1000,26 @@ $(document).ready(function() {
   <script src="https://cdn.jsdelivr.net/gh/1059431281/CDN@1.2/live2d/live2d.js"></script>
   <script type="text/javascript">
       initModel("https://cdn.jsdelivr.net/gh/1059431281/CDN@1.2/live2d/")
-
-      // window.onload = function(){
-      //                  //屏蔽键盘事件
-      //                  document.onkeydown = function (){
-      //                          var e = window.event || arguments[0];
-      //                          //F12
-      //                          if(e.keyCode == 123){
-      //                                  return false;
-      //                              //Ctrl+Shift+I
-      //                              }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
-      //                                  return false;
-      //                              //Shift+F10
-      //                              }else if((e.shiftKey) && (e.keyCode == 121)){
-      //                                  return false;
-      //                              //Ctrl+U
-      //                              }else if((e.ctrlKey) && (e.keyCode == 85)){
-      //                                  return false;
-      //                              }
-      //                      };
-      //                  //屏蔽鼠标右键
-      //                  document.oncontextmenu = function (){
-      //                          return false;
-      //                      }
-      //
-      //
-      //              }
+      document.onkeydown = function (){
+                           var e = window.event || arguments[0];
+                           //F12
+                           if(e.keyCode == 123){
+                                   return false;
+                               //Ctrl+Shift+I
+                               }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+                                   return false;
+                               //Shift+F10
+                               }else if((e.shiftKey) && (e.keyCode == 121)){
+                                   return false;
+                               //Ctrl+U
+                               }else if((e.ctrlKey) && (e.keyCode == 85)){
+                                   return false;
+                               }
+                       };
+                   //屏蔽鼠标右键
+                   document.oncontextmenu = function (){
+                           return false;
+                       }
   </script>
   <script src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/js/sakura.js"></script>
 </body>
