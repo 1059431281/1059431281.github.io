@@ -1014,7 +1014,7 @@ textarea {
     color:#a5a5a5
 }
 a {
-    color:#e67474;
+    color: lightskyblue;
     outline:0;
     -webkit-transition:color .2s ease-out,border .2s ease-out,opacity .2s ease-out;
     -moz-transition:color .2s ease-out,border .2s ease-out,opacity .2s ease-out;
@@ -1488,7 +1488,7 @@ a:hover,a:active {
     position:absolute;
     bottom:-16px;
     height:6px;
-    background-color:#fe9600;
+    background-color: lightskyblue;
     width:100%;
     max-width:0;
     transition:max-width .25s ease-in-out
@@ -1499,7 +1499,7 @@ a:hover,a:active {
     position:absolute;
     bottom:-21px;
     height:6px;
-    background-color:#fe9600;
+    background-color: lightskyblue;
     width:100%;
     max-width:0;
     transition:max-width .25s ease-in-out
@@ -2127,7 +2127,7 @@ i.iconfont.hotpost {
 }
 .entry-content code {
     background:rgba(254,250,199,1);
-    color:#e67474;
+    color: lightskyblue;
     word-break:break-word;
     font-family:'Source Code Pro',monospace,Helvetica,Tahoma,Arial,STXihei,"STHeiti Light","Microsoft YaHei",sans-serif;
     padding:2px;
@@ -2135,7 +2135,7 @@ i.iconfont.hotpost {
     border-radius:5px
 }
 .entry-content a {
-    color:#e67474;
+    color: lightskyblue;
     text-decoration:underline dotted rgba(0,0,0,.1)
 }
 .entry-content a:hover {
@@ -2846,7 +2846,7 @@ h3#comments-list-title {
     margin:auto
 }
 .butterBar-message {
-    background:#fe9600;
+    background: lightskyblue;
     color:#fff;
     border-bottom-left-radius:4px;
     border-bottom-right-radius:4px;
@@ -3632,9 +3632,9 @@ a.page-numbers {
     text-shadow:none
 }
 .comment-respond input[type='submit']:hover {
-    border:1px solid #fe9600;
+    border:1px solid  lightskyblue;
     background:none !important;
-    color:#fe9600
+    color: lightskyblue;
 }
 .comment-respond input[type='submit']:hover {
     background:#5aa738
@@ -3728,7 +3728,7 @@ a.page-numbers {
     line-height:1
 }
 .siren-checkbox-radio:checked+.siren-checkbox-radioInput:after {
-    background-color:#fe9600;
+    background-color: lightskyblue;
     border-radius:100%;
     content:"";
     display:block;
@@ -5269,8 +5269,8 @@ i.iconfont.js-toggle-search.iconsearch {
     margin-bottom:20px
 }
 .ex-login input.login-button:hover,.ex-register input.register-button:hover {
-    background-color:#e67474;
-    border-color:#e67474;
+    background-color: lightskyblue;
+    border-color: lightskyblue;
     color:#fff
 }
 .user-login-check,.admin-login-check {
@@ -5300,7 +5300,7 @@ i.iconfont.js-toggle-search.iconsearch {
     font-size:16px
 }
 .ex-new-account a:hover {
-    color:#e67474
+    color: lightskyblue;
 }
 .ex-logout {
     padding-top:1em
