@@ -412,7 +412,7 @@ function scrollBar () {
           $('#bar').css('background', '#5aaadb')
         }
       } else {
-        $('#bar').css('background', 'orange')
+        $('#bar').css('background', 'lightskyblue')
       }
       $('.toc-container').css('height', $('.site-content').outerHeight())
       $('.skin-menu').removeClass('show')
