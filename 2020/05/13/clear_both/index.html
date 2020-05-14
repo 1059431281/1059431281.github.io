@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">comment | 雨宿り</title>
+  <title itemprop="name">伪元素清除浮动原理 | 雨宿り</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -343,37 +343,97 @@
   </div>
 </header>
 
-        <div class="pattern-center-blank"></div>
-  
-    <div class="pattern-center ">
-      <div class="pattern-attachment-img">
-        <img src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/1059431281/cdn@master/img/banner/comment_2.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-      </div>
-      <header class="pattern-header ">
-        <h1 class="entry-title">
-        留言板</h1>
-      </header>
-    </div>
-  
-  <div id="content" class="site-content">
-    <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-      
-<div class="entry-content">
-  <div class="poem-wrap">
-    <div class="poem-border poem-left">
-    </div>
-    <div class="poem-border poem-right">
-    </div>
-    <h1>
-    美しい言葉</h1>
-    <div class="comment_poem">
-    <p id="poem">
-        获取中……</p>
-        </div>
-  </div>
-</div>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
 
-      <!-- .entry-content -->
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style=" background-image: url(https://cdn.jsdelivr.net/gh/1059431281/Blog-source/img/category/study_3.webp);" src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/1059431281/Blog-source/img/category/study_3.webp">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      伪元素清除浮动原理</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/custom/avatar.png">
+          </a>
+        </span>
+        <span>
+          <a href="">雨宿り</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-5-13<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过度娘，我们不能得知解决浮动带来的影响方法有常见的overflow:hidden和clear:both，又或是根据BFC规则解决，而今天我要讲解的关于伪元素中使用clear:both的原理（别觉得没必要，知道总比不知道好，看一看花不了几分钟的）<br><br></p>
+<p></p><h1>Clear:both清除浮动原理</h1><br>下面我将其分为三种状况来讲：<p></p>
+<ol>
+<li><img src="https://cdn.jsdelivr.net/gh/1059431281/Blog-source/img/md_assets/clear_both_1.png" alt><br>其中黑色部分为父元素div，红为左浮动的子div，蓝则为给父元素div添加的伪元素，此时他的内容是”:after伪元素”<br>在这里能明显看见，因为子元素浮动无法撑开盒子，所以我们这时给伪元素加上clear:both属性</li>
+<li><img src="https://cdn.jsdelivr.net/gh/1059431281/Blog-source/img/md_assets/clear_both_2.png" alt><br>clear属性的作用是清除浮动对自己带来的影响，也就是对现在的蓝div来说红div并非处于浮动状态，自然而然它就会被挤到红色的div下面，从而导致黑div被蓝div撑开</li>
+<li><img src="https://cdn.jsdelivr.net/gh/1059431281/Blog-source/img/md_assets/clear_both_3.png" alt><br>最后，只要把蓝div的内容设为空就行了（虽然没内容但还是会被挤下去，黑依旧会被撑开，而因为蓝没内容也不会被额外撑开）。还有，若要更优化可以加上visibility:hidden,使蓝div彻底不可见</li>
+</ol>
+<p>PS：可能存在一些看似废话的话，但这里尽可能详细，让任何人都看得懂（高手也不会来这种地方吧）</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/1059431281/CDN@1.5/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/1059431281/CDN@1.5/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/05/10/drawing/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/1059431281/CDN@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/category/study_2.jpeg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/category/study_2.jpeg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                从零开始学画画</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
 <div id="vcomments"></div>
 <script>
@@ -390,43 +450,24 @@
     }
 </script>
 
-      <div class="single-reward">
-        <div class="reward-open">赏
-          <div class="reward-main">
-            <ul class="reward-row">
-              <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/1059431281/CDN@1.5/img/custom/donate/AliPayQR.jpg"></li>
-              <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/1059431281/CDN@1.5/img/custom/donate/WeChanQR.jpg"></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-      <footer class="post-footer">
-        <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-        <div class="post-tags">
-        </div>
-        <div class="post-share">
-          <div class="social-share sharehidden share-component"></div>
-          <i class="iconfont show-share icon-forward"></i>
-        </div>
-      </footer><!-- .entry-footer -->
-    </article>
-      <!-- #post-## -->
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/1059431281/CDN@1.5/img/custom/avatar.png" itemprop="image" alt="幽奈さん" height="70" width="70"></a>
+          <a href="" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/1059431281/CDN/img/custom/avatar.png" itemprop="image" alt="雨宿り" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="https://kowu.xyz" itemprop="url" rel="author">幽奈さん</a>
+            <a href="" itemprop="url" rel="author">雨宿り</a>
             </h3>
           </div>
         </div>
         <hr>
         <p><i class="iconfont icon-write"></i>温柔是好，但并非所有人都喜欢温柔</p>
       </section>
+    </main><!-- #main -->
   </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
