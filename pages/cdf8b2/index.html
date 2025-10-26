@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>useVModel | ゆらぎ荘の幽奈さん</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="./img/d.png">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta name="description" content="web前端技术博客,简洁至上,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github等技术文章。">
+    <meta name="keywords" content="前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/assets/css/0.styles.7dbce163.css" as="style"><link rel="preload" href="/assets/js/app.7f8612d2.js" as="script"><link rel="preload" href="/assets/js/2.8f62c2a0.js" as="script"><link rel="preload" href="/assets/js/3.fbc0c9b3.js" as="script"><link rel="preload" href="/assets/js/19.dbf8c765.js" as="script"><link rel="prefetch" href="/assets/js/10.1f130a2c.js"><link rel="prefetch" href="/assets/js/11.e3694241.js"><link rel="prefetch" href="/assets/js/12.0b9a835a.js"><link rel="prefetch" href="/assets/js/13.6778eb7e.js"><link rel="prefetch" href="/assets/js/14.06713df5.js"><link rel="prefetch" href="/assets/js/15.f4449fb4.js"><link rel="prefetch" href="/assets/js/16.bd5c1114.js"><link rel="prefetch" href="/assets/js/17.939992ac.js"><link rel="prefetch" href="/assets/js/18.c5954949.js"><link rel="prefetch" href="/assets/js/20.356e6d7c.js"><link rel="prefetch" href="/assets/js/21.558c3070.js"><link rel="prefetch" href="/assets/js/22.3fbdcb5c.js"><link rel="prefetch" href="/assets/js/23.531a7ec9.js"><link rel="prefetch" href="/assets/js/24.8f2bc73e.js"><link rel="prefetch" href="/assets/js/25.4219b0a2.js"><link rel="prefetch" href="/assets/js/26.b040eeb8.js"><link rel="prefetch" href="/assets/js/27.d41d8aba.js"><link rel="prefetch" href="/assets/js/28.8ccb862a.js"><link rel="prefetch" href="/assets/js/29.1c8156f7.js"><link rel="prefetch" href="/assets/js/30.ad92e326.js"><link rel="prefetch" href="/assets/js/31.45fd3f33.js"><link rel="prefetch" href="/assets/js/32.12d97258.js"><link rel="prefetch" href="/assets/js/33.d6cc4daa.js"><link rel="prefetch" href="/assets/js/34.91175e8a.js"><link rel="prefetch" href="/assets/js/35.4433b12f.js"><link rel="prefetch" href="/assets/js/36.432cd2ab.js"><link rel="prefetch" href="/assets/js/37.63c25ba8.js"><link rel="prefetch" href="/assets/js/38.53a294b6.js"><link rel="prefetch" href="/assets/js/39.2de4e783.js"><link rel="prefetch" href="/assets/js/4.334b66ba.js"><link rel="prefetch" href="/assets/js/40.246fd4f0.js"><link rel="prefetch" href="/assets/js/41.1fab0bad.js"><link rel="prefetch" href="/assets/js/42.7c629bd0.js"><link rel="prefetch" href="/assets/js/43.fdbbd2a0.js"><link rel="prefetch" href="/assets/js/44.240c5a96.js"><link rel="prefetch" href="/assets/js/45.b67d1371.js"><link rel="prefetch" href="/assets/js/46.617ce187.js"><link rel="prefetch" href="/assets/js/47.59146731.js"><link rel="prefetch" href="/assets/js/48.851f279f.js"><link rel="prefetch" href="/assets/js/49.904b85c2.js"><link rel="prefetch" href="/assets/js/5.f8936771.js"><link rel="prefetch" href="/assets/js/50.64364341.js"><link rel="prefetch" href="/assets/js/51.b4102e42.js"><link rel="prefetch" href="/assets/js/52.c9ee9a7a.js"><link rel="prefetch" href="/assets/js/53.6945268f.js"><link rel="prefetch" href="/assets/js/54.56bd96b0.js"><link rel="prefetch" href="/assets/js/55.b2a8fc28.js"><link rel="prefetch" href="/assets/js/56.a7aa1640.js"><link rel="prefetch" href="/assets/js/57.40d8e0e5.js"><link rel="prefetch" href="/assets/js/58.207ab2cc.js"><link rel="prefetch" href="/assets/js/59.a6ab4b5c.js"><link rel="prefetch" href="/assets/js/6.a1d56fe1.js"><link rel="prefetch" href="/assets/js/60.d25454ad.js"><link rel="prefetch" href="/assets/js/61.7ed8db18.js"><link rel="prefetch" href="/assets/js/62.cad3d04d.js"><link rel="prefetch" href="/assets/js/63.8be61101.js"><link rel="prefetch" href="/assets/js/64.7b24da96.js"><link rel="prefetch" href="/assets/js/65.88663a4a.js"><link rel="prefetch" href="/assets/js/66.d43f717a.js"><link rel="prefetch" href="/assets/js/67.2a8ff76b.js"><link rel="prefetch" href="/assets/js/68.5a871cc3.js"><link rel="prefetch" href="/assets/js/69.ada21f6d.js"><link rel="prefetch" href="/assets/js/7.c6f1828d.js"><link rel="prefetch" href="/assets/js/70.5f5f5a22.js"><link rel="prefetch" href="/assets/js/71.f3186b4f.js"><link rel="prefetch" href="/assets/js/72.89ac627d.js"><link rel="prefetch" href="/assets/js/73.246a602c.js"><link rel="prefetch" href="/assets/js/74.794d450f.js"><link rel="prefetch" href="/assets/js/75.452de7c3.js"><link rel="prefetch" href="/assets/js/8.8985d848.js"><link rel="prefetch" href="/assets/js/9.68346b58.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7dbce163.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><span class="site-name can-hide">ゆらぎ荘の幽奈さん</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/archives/" class="nav-link">归档</a></div> <a href="https://github.com/1059431281" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://cdn.jsdelivr.net/gh/1059431281/Blog-source/img/custom/avatar.png"> <div class="blogger-info"><h3>雨宿り</h3> <span>ゆらぎ荘の幽奈さん</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/archives/" class="nav-link">归档</a></div> <a href="https://github.com/1059431281" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/pages/cdf8b2/" aria-current="page" class="active sidebar-link">useVModel</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/cdf8b2/#什么是-usevmodel" class="sidebar-link">什么是 useVModel？</a></li><li class="sidebar-sub-header"><a href="/pages/cdf8b2/#源码分析" class="sidebar-link">源码分析</a></li></ul></li><li><a href="/pages/bc82e9/" class="sidebar-link">useMouse</a></li><li><a href="/pages/98d4dd/" class="sidebar-link">onClickOutside</a></li><li><a href="/pages/dca74d/" class="sidebar-link">configurable</a></li><li><a href="/pages/724f17/" class="sidebar-link">useEventListener</a></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-583ea4e9><div class="articleInfo" data-v-583ea4e9><ul class="breadcrumbs" data-v-583ea4e9><li data-v-583ea4e9><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-583ea4e9></a></li> <li data-v-583ea4e9><a href="/categories/?category=vueuse" title="分类" data-v-583ea4e9>vueuse</a></li> <!----> <!----></ul> <div class="info" data-v-583ea4e9><div title="作者" class="author iconfont icon-touxiang" data-v-583ea4e9><a href="javascript:;" data-v-583ea4e9>雨宿り</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-583ea4e9><a href="javascript:;" data-v-583ea4e9>2022-03-26</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">
+          useVModel
+        </h1> <div class="page-slot page-slot-top"><!-- 固定100% * 90px可显示，max-height:90px未见显示-->
+     <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;max-height:90px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6625304284"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="theme-vdoing-content content__default"><h1 id="usevmodel"><a href="#usevmodel" class="header-anchor">#</a> useVModel</h1> <p>本期介绍的是 vueuse 中的 useVmodel，接下来就跟随文章一起学习它的源码吧！</p> <h2 id="什么是-usevmodel"><a href="#什么是-usevmodel" class="header-anchor">#</a> 什么是 useVModel？</h2> <p>useVModel 是一个用来简化我们做一些类似弹窗组件时的值传递的 api，下面就用一个简单的例子来方便理解下:（vue3 写法）</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code><span class="token comment">&lt;!-- 父组件 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>formModel</span> <span class="token attr-name"><span class="token namespace">v-model:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>formData.name<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>formModel</span><span class="token punctuation">&gt;</span></span>
+    {{ formData }}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> reactive <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vue-demi&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> formModel <span class="token keyword">from</span> <span class="token string">&quot;xxx&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    formData<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> formData <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">&quot;名字&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      formData<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- 子组件 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">&gt;</span></span>
+      name:
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>_name<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span> <span class="token attr-name">setup</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useVModel <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;../utils/useVmodel&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineEmits<span class="token punctuation">,</span> defineProps <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vue-demi&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> props <span class="token operator">=</span> <span class="token function">defineProps</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> String<span class="token punctuation">,</span>
+  sex<span class="token operator">:</span> String<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> emit <span class="token operator">=</span> <span class="token function">defineEmits</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&quot;update:name&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> _name <span class="token operator">=</span> <span class="token function">useVModel</span><span class="token punctuation">(</span>props<span class="token punctuation">,</span> <span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span> emit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div><p>我们这里把子组件理解成一个填写表单的弹窗，在父组件引入使用。</p> <p>我们可以看到，我们在子组件使用 useVModel 返回的数据用来展示，因为 useVModel 返回的数据是响应式，现在先让我回过头看看不用 useVModel 的写法。</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code><span class="token comment">&lt;!-- 子组件 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">&gt;</span></span>
+      name:
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>props.name<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span> <span class="token attr-name">setup</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useVModel <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;../utils/useVmodel&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineEmits<span class="token punctuation">,</span> defineProps <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vue-demi&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> props <span class="token operator">=</span> <span class="token function">defineProps</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> String<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> emit <span class="token operator">=</span> <span class="token function">defineEmits</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&quot;update:name&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">&quot;update:name&quot;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>这里的写法还是比较草率的，正常来讲我们会用 computed 或 watch 进行处理，在里面进行 emit 调用。总而言之，useVMode 就是省略下了 computed/watch 封装和 emit 的调用。</p> <p>好了，既然现在理解了 useVMode 的使用场景，那么下面就来看看源码。</p> <h2 id="源码分析"><a href="#源码分析" class="header-anchor">#</a> 源码分析</h2> <p>就不一段段解析了，我在源码上加上自己的注释（英文是源码本身的注释）进行解释</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token comment">/**
+	记录点·unwrapRef需要跟随ts单独出个文章
+	vue-demi跟单纯的vue不同，它里面包含vue2和vue3的安排，也就是一个同事兼容vue2与vue3的第三方包
+*/</span>
+<span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token punctuation">{</span> UnwrapRef <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vue-demi&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> computed<span class="token punctuation">,</span> getCurrentInstance<span class="token punctuation">,</span> isVue2<span class="token punctuation">,</span> ref<span class="token punctuation">,</span> watch <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vue-demi&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">VModelOptions</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * When passive is set to `true`, it will use `watch` to sync with props and ref.
+     * Instead of relying on the `v-model` or `.sync` to work.
+     *
+     * @default false
+     *简单解释就是讲passive设置为true的时候弃用vue3的v-model或vue2的.sync的同步工作语法糖，改用watch的方法去同步父组件传递过来的props和返回给子组件使用ref（就是把props内要使用的变量重新定义成当前this下的ref(相应数据)）
+     * 默认值为false
+    */</span>
+    passive<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * When eventName is set, it's value will be used to overwrite the emit event name.
+     *
+     * @default undefined
+     * 这个简单，就是如果你有传递事件名的话，这个事件名将会被设置后续会使用emit上
+     * 默认值为undefined
+     */</span>
+    eventName<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * Attempting to check for changes of properties in a deeply nested object or array.
+     *
+     * @default false
+     * 是否对对象或数组进行深层监听（例如：{a:{achild:12}},一般改变achild是不会被监听到，值会监听一整个a是否改变）
+     * 默认值为false
+     */</span>
+    deep<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * Shorthand for v-model binding, props + emit -&gt; ref
+ * v-model绑定方式的缩写
+ *
+ * @see https://vueuse.org/useVModel
+ * @param props
+ * @param key (default 'value' in Vue 2 and 'modelValue' in Vue 3)
+ * vue2和vue3的key默认值是不一样的，vue2中默认值是v-model:value，vue3是v-model:modelValue
+ * @param emit
+ */</span>
+
+<span class="token comment">//这里涉及到ts的语法，它先使用泛型，也就是&lt;&gt;对一些函数内会用的类型进行预设</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">useVModel</span><span class="token generic class-name"><span class="token operator">&lt;</span>
+    <span class="token constant">P</span> <span class="token keyword">extends</span> object<span class="token punctuation">,</span><span class="token comment">//要求类型P是object的子类</span>
+    <span class="token constant">K</span> <span class="token keyword">extends</span> <span class="token keyword">keyof</span> <span class="token constant">P</span><span class="token punctuation">,</span><span class="token comment">//要求类型K是P的子类（这里深入一点讲是{name|sex}的子类，在P是object的子类的基础上，P也有自己包含的类型，例如上面例如中的props值，那么P的类型内就用{name|sex}，也就是说如果传入的K类型的值不是name或者sex就是错误的。这里用到ts的keyof实现了这一点）</span>
+    Name <span class="token keyword">extends</span> <span class="token builtin">string</span><span class="token comment">//要求类型Name是string的子类</span>
+<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>
+    props<span class="token operator">:</span> <span class="token constant">P</span><span class="token punctuation">,</span><span class="token comment">//要求props的参数类型为P</span>
+    key<span class="token operator">?</span><span class="token operator">:</span> <span class="token constant">K</span><span class="token punctuation">,</span><span class="token comment">//可选参数，表示参数类型可以是K，当然也可以是其他甚至没有</span>
+    emit<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span>name<span class="token operator">:</span> Name<span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span><span class="token punctuation">,</span><span class="token comment">//可选参数，表示参数类型可以是对应形式的函数类型(这里写的是Name的类型，其实也就是字符串类型，然后后面是任意可选参数，最后返回值为空)，当然也可以是其他甚至没有</span>
+    options<span class="token operator">:</span> VModelOptions <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token comment">//这里是选项参数，可选的，对应的参数要求根据上面的接口类型VModelOptions</span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> passive <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span> eventName<span class="token punctuation">,</span> deep <span class="token operator">=</span> <span class="token boolean">false</span> <span class="token punctuation">}</span> <span class="token operator">=</span> options<span class="token punctuation">;</span>
+
+  	<span class="token comment">//getCurrentInstance一个专门给特殊场景使用的api，可以把它理解成或者内部组件的this，但不推荐用来当作是组合式api的场景。附上官方链接(https://v3.cn.vuejs.org/api/composition-api.html#getcurrentinstance)</span>
+    <span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token function">getCurrentInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// @ts-expect-error mis-alignment with @vue/composition-api</span>
+  	<span class="token comment">/**
+  	 * 这里从左边到右三个emit分别是有传emit时就直接获取，没有的话如果是vue3就用vm.emit获取，vue2的话就是vm.$emit.bind(vm)获取
+  	 * 【注1：这里的场景是在内部组件有声明但没传递的情况】
+  	 * 【注2：vue3的emit是直接.emit，而vue2需要加上$】
+
+  	 * 关于event，是我们最终会用到的事件名，类型是字符串或undfined没什么好说。
+  	 * eventName是从第四个可选参数中获得，如果有的话
+    */</span>
+    <span class="token keyword">const</span> _emit <span class="token operator">=</span> emit <span class="token operator">||</span> vm<span class="token operator">?.</span>emit <span class="token operator">||</span> vm<span class="token operator">?.</span>$emit<span class="token operator">?.</span><span class="token function">bind</span><span class="token punctuation">(</span>vm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> event<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token keyword">undefined</span> <span class="token operator">=</span> eventName<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 这里是没有传key的情况下处理，分为vue2和vue3两种处理方法
+     * vue2：关于这里的vm.proxy.options.model获取可以去看看vue2.2起支持的自定义model，原理出自这（https://cn.vuejs.org/v2/api/#model）
+     * 如果有定制value就拿定制的，如果没就用vue2中默认值value给key起名(上面说过)
+     * 同理，如果有定制的event就拿定制，没有就用vue2中v-model语法糖缩写的input起名(vue2的默认形式就是v-model:value=&quot;默认值&quot;,@input=&quot;默认值()&quot;。又记录了一边—— ——)
+
+     * vue3: vue3的就比较简单了，v-model缩写的默认值是modelValue(v-model:modelValue=&quot;默认值&quot;。再说一遍，vue2的是value)
+     * 至于这里为什么不给event设置默认值，因为代码下面对event的最终获取是用update:xx的，跟vue3缩写前的@update:xx不谋而合（vue2是@input:xx）
+    */</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isVue2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> modelOptions <span class="token operator">=</span> vm<span class="token operator">?.</span>proxy<span class="token operator">?.</span>$options<span class="token operator">?.</span>model<span class="token punctuation">;</span>
+            key <span class="token operator">=</span> modelOptions<span class="token operator">?.</span>value <span class="token operator">||</span> <span class="token punctuation">(</span><span class="token string">&quot;value&quot;</span> <span class="token keyword">as</span> <span class="token constant">K</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>eventName<span class="token punctuation">)</span> event <span class="token operator">=</span> modelOptions<span class="token operator">?.</span>event <span class="token operator">||</span> <span class="token string">&quot;input&quot;</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            key <span class="token operator">=</span> <span class="token string">&quot;modelValue&quot;</span> <span class="token keyword">as</span> <span class="token constant">K</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    event <span class="token operator">=</span> eventName <span class="token operator">||</span> event <span class="token operator">||</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token template-punctuation string">`</span></span>update<span class="token operator">:</span>$<span class="token punctuation">{</span>key<span class="token punctuation">}</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+	<span class="token comment">/**
+	 * 这里就是上面替到的，要用语法糖的同步功能还是自己用watch去实现了
+	 * 说实话我也不知道这里为什么要区分两种，盲猜是想用检测深层嵌套功能
+	*/</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>passive<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  	<span class="token comment">/**
+  	 * 使用ref创建响应式数据props[key](按例子来就是props.name)。多说一句，key这个东西有可能为空，在ts中会判断它不能给到props，所以在后面加上感叹号，如果key为空就会抛出断言失败(断言就是上面用的as)
+  	*/</span>
+        <span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token generic-function"><span class="token function">ref</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">P</span><span class="token punctuation">[</span><span class="token constant">K</span><span class="token punctuation">]</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>props<span class="token punctuation">[</span>key<span class="token operator">!</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  	<span class="token comment">/**
+  	 * 猜猜这里为什么要用两次watch？
+  	 * 第一个watch，是用来监听props[key]这个值的变化；第二个watch，是用来监听proxy(上面创的响应数据)。
+  	 * 这里再说清楚一点，第一个watch监听的是父组件那边的变化后我们在子组件也做更新，第二个watch是监听子组件上数据的改变然后用emit把父组件的改了
+  	*/</span>
+        <span class="token function">watch</span><span class="token punctuation">(</span>
+            <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> props<span class="token punctuation">[</span>key<span class="token operator">!</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>proxy<span class="token punctuation">.</span>value <span class="token operator">=</span> v <span class="token keyword">as</span> UnwrapRef<span class="token operator">&lt;</span><span class="token constant">P</span><span class="token punctuation">[</span><span class="token constant">K</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">watch</span><span class="token punctuation">(</span>
+            proxy<span class="token punctuation">,</span>
+            <span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>v <span class="token operator">!==</span> props<span class="token punctuation">[</span>key<span class="token operator">!</span><span class="token punctuation">]</span> <span class="token operator">||</span> deep<span class="token punctuation">)</span> <span class="token function">_emit</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                deep<span class="token punctuation">,</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> proxy<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  		<span class="token comment">/**
+  		 * 正常情况下最终都会入到这个作用域
+  		 * 用computed方法，这没什么好说，唯一需要注意的地方就是用泛型&lt;p[K]&gt;定义了返回类型
+  		 * set方法就是触发了emit，照上面的例子来就是触发了emit(&quot;update:name&quot;,新值)
+  		 * 多说一句，这里返回的是computed，而get会返回最终的值，而之所以最终uVModel返回的值是响应式的就是利用了computed 的特性
+  		*/</span>
+        <span class="token keyword">return</span> <span class="token generic-function"><span class="token function">computed</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">P</span><span class="token punctuation">[</span><span class="token constant">K</span><span class="token punctuation">]</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> props<span class="token punctuation">[</span>key<span class="token operator">!</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token keyword">set</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">_emit</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br></div></div><p>呼~终于写完了，在经历无数次的失忆之后，发现把东西记录下来还是很有用的。✔</p></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/1059431281/edit/master/docs/vueuse/01.useVModel.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="tags"><a href="/tags/?tag=%E7%AD%94%E7%96%91" title="标签">#答疑</a><a href="/tags/?tag=vue" title="标签">#vue</a></div> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><!----> <a href="/pages/bc82e9/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">useMouse</div></a></div> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/pages/bc82e9/">useMouse</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/6997f1/"><div>NuxtImg跨平台打包教程</div></a> <span>06-27</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/2f367c/"><div>代码换行规则</div></a> <span>03-12</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/966b55/"><div>Stable Diffusion尝鲜</div></a> <span>10-27</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:894072666@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/1059431281" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2019-2025
+    <span>雨宿り | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span> <div id="jsi-flying-fish-container" class="container" style="  width: 100vw;\n  left: 0;\n  position: fixed;\n  bottom: 0;\nheight: 150px;\nmargin: 0;\npadding: 0;"></div> <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div> <div class="container" style="  width: 100vw;\n  left: 0;\n  position: fixed;\n  bottom: 0;\nheight: 150px;\nmargin: 0;\npadding: 0;"></div></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">跟随系统</li><li class="iconfont icon-rijianmoshi">浅色模式</li><li class="iconfont icon-yejianmoshi">深色模式</li><li class="iconfont icon-yuedu">阅读模式</li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;max-width:160px;max-height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.7f8612d2.js" defer></script><script src="/assets/js/2.8f62c2a0.js" defer></script><script src="/assets/js/3.fbc0c9b3.js" defer></script><script src="/assets/js/19.dbf8c765.js" defer></script>
+  </body>
+</html>
